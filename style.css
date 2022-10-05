@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Splash&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #000000, #2a1417, #4d1f20, #702d22, #90401d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.player-container{
+  height: 550px;
+  width: 400px;
+  background-color: #ececec; 
+  border-radius: 15px;
+}
+
+.img-container {
+  height: 300px;
+  position: relative;
+  top: -10%;
+  width: 100%;
+}
+
+.img-container img{
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  margin-top: -20px;
+}
+
+h3 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+  font-family: "Splash", sans-serif;
+  letter-spacing: 8px;
+}
+
+h4{
+  font-size: 15px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+  margin-bottom: 20px;
+}
+
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+  height: 4px;
+  width: 85%;
+  margin-top: 10px;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0;
+  transition: width 0.1s linear;
+}
+
+.progress:hover{
+  background:#f96d00;
+}
+
+.duration-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  top: -30px;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 130px;
+  width: 200px;
+}
+
+.player-controls-two{
+  position: relative;
+  top: -15px;
+  left: 140px;
+  width: 200px;
+}
+
+.fas {
+  font-size: 30px;
+  color:#222831;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.fas:hover{
+  color: #f96d00;
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query */
+@media screen and (max-width: 386px) {
+
+  .player-container{
+    width: 95vw;
+    margin: 10px;
+  }
+
+  .player-controls-two{
+    left: 117px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
+
+/* KeyFrames */
+@keyframes gradient {
+	0% {
+		background-position: 100% 100%;
+	}
+	50% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
+}
